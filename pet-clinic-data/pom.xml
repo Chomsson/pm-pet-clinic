@@ -3,7 +3,7 @@
     <parent>
         <artifactId>pm-pet-clinic</artifactId>
         <groupId>pm.spring</groupId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

@@ -14,7 +14,7 @@
     </parent>
     <groupId>pm.spring</groupId>
     <artifactId>pm-pet-clinic</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0</version>
     <name>pm-pet-clinic</name>
     <description>PM Pet Clinic Project</description>
 
@@ -41,5 +41,6 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:Chomsson/pm-pet-clinic.git</developerConnection>
+    <tag>pm-pet-clinic-4.0.0</tag>
   </scm>
 </project>
