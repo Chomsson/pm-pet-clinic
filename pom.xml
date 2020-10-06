@@ -23,13 +23,24 @@
         <java.version>11</java.version>
     </properties>
 
-    <!--<build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <goal>install</goal>
+                </configuration>
+            </plugin>
         </plugins>
-    </build>-->
+    </build>
 
+    <scm>
+        <developerConnection>git@github.com:Chomsson/pm-pet-clinic.git</developerConnection>
+    </scm>
 </project>
