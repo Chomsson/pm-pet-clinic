@@ -40,7 +40,6 @@
     </build>
 
     <scm>
-        <developerConnection>https://github.com/Chomsson/pm-pet-clinic.git</developerConnection>
-      <tag>4.0</tag>
+        <developerConnection>scm:git:git@github.com:Chomsson/pm-pet-clinic.git</developerConnection>
   </scm>
 </project>
