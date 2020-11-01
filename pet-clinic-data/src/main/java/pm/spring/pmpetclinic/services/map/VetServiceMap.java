@@ -4,10 +4,11 @@ package pm.spring.pmpetclinic.services.map;
 
 import pm.spring.pmpetclinic.model.Vet;
 import pm.spring.pmpetclinic.services.CrudService;
+import pm.spring.pmpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
