@@ -2,11 +2,13 @@ package pm.spring.pmpetclinic.services.map;
 /* created by PM
   at 20.10.2020 */
 
+import org.springframework.stereotype.Service;
 import pm.spring.pmpetclinic.model.Owner;
 import pm.spring.pmpetclinic.services.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
@@ -26,7 +28,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner save(Owner object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override

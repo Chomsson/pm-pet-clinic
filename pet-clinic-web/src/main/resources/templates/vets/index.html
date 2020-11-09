@@ -5,7 +5,25 @@
     <title>List of Vets</title>
 </head>
 <body>
+<!--/*@thymesVar id="owner" type"pm.spring.pmpetclinic.model.Vet"*/-->
 <h1 th:text="'List of Vets'">List of Vets...</h1>
+
+<table>
+    <thread>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thread>
+    <body>
+    <tr th:each="vet : ${vets}">
+        <td th:text="${vet?.id}">1</td>
+        <td th:text="${vet?.firstName}">Anna</td>
+        <td th:text="${vet?.lastName}">Ko</td>
+    </tr>
+    </body>
+</table>
 
 </body>
 </html>

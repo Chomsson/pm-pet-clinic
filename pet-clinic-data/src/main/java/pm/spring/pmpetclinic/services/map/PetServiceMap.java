@@ -2,12 +2,14 @@ package pm.spring.pmpetclinic.services.map;
 /* created by PM
   at 20.10.2020 */
 
+import org.springframework.stereotype.Service;
 import pm.spring.pmpetclinic.model.Pet;
 import pm.spring.pmpetclinic.services.CrudService;
 import pm.spring.pmpetclinic.services.PetService;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
@@ -26,7 +28,7 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
 
     @Override
     public Pet save(Pet object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
