@@ -14,8 +14,8 @@
             <th style="width: 150px;">Id</th>
             <th style="width: 200px;">First Name</th>
             <th style="width: 200px;">Last Name</th>
-            <th>City</th>
-            <th>Pets</th>
+            <th style="width: 200px;">City</th>
+            <th style="width: 200px;">Pets</th>
         </tr>
     </thread>
     <body>
@@ -23,6 +23,8 @@
         <td th:text="${owner?.id}">1</td>
         <td th:text="${owner?.firstName}">Zdzisław</td>
         <td th:text="${owner?.lastName}">Kowalski</td>
+        <td th:text="${owner?.city}">gdynia</td>
+        <td><span th:each="pet : ${owner.pets}" th:utext="|${pet.name} <br />|"/></td>
     </tr>
     </body>
 </table>
