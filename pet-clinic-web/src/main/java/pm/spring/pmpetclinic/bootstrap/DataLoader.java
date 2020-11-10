@@ -3,10 +3,12 @@ package pm.spring.pmpetclinic.bootstrap;
   at 01.11.2020 */
 
 import pm.spring.pmpetclinic.model.Owner;
+import pm.spring.pmpetclinic.model.PetType;
 import pm.spring.pmpetclinic.model.Vet;
 import pm.spring.pmpetclinic.services.OwnerService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import pm.spring.pmpetclinic.services.PetTypeService;
 import pm.spring.pmpetclinic.services.VetService;
 
 
@@ -15,15 +17,24 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-
-    public DataLoader(OwnerService ownerService, VetService vetService){
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService){
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType savedDogType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        dog.setName("Cat");
+        PetType savedCatType = petTypeService.save(cat);
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Zdzisław");
