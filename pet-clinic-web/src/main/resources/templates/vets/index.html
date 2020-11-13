@@ -22,6 +22,7 @@
         <td th:text="${vet?.id}">1</td>
         <td th:text="${vet?.firstName}">Anna</td>
         <td th:text="${vet?.lastName}">Ko</td>
+        <td><span th:each="speciality : ${vet.specialities}" th:utext = "${speciality.description} + ' <br />'"></span></td>
     </tr>
     </body>
 </table>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}" >
+${#strings.replace(desc,'&#10;','&lt;br&gt;')}
 <head>
     <meta charset="UTF-8">
     <title>List of Owners</title>
@@ -21,10 +22,10 @@
     <body>
     <tr th:each="owner : ${owners}">
         <td th:text="${owner?.id}">1</td>
-        <td th:text="${owner?.firstName}">Zdzisław</td>
-        <td th:text="${owner?.lastName}">Kowalski</td>
-        <td th:text="${owner?.city}">gdynia</td>
-        <td><span th:each="pet : ${owner.pets}" th:utext="|${pet.name} <br />|"/></td>
+        <td th:text="${owner?.firstName}"></td>
+        <td th:text="${owner?.lastName}"></td>
+        <td th:text="${owner?.city}"></td>
+        <td><span th:each="pet : ${owner.pets}" th:utext = "${pet.name} + ' <br />'"></span></td>
     </tr>
     </body>
 </table>

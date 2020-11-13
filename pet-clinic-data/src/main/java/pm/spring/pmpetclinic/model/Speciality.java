@@ -7,6 +7,11 @@ import javax.persistence.Entity;
 //@Entity
 //@Table(name = "specialties")
 public class Speciality extends BaseEntity {
+
+    public Speciality(String description){
+        setDescription(description);
+    }
+
     private String description;
 
     public String getDescription() {
