@@ -2,6 +2,7 @@ package pm.spring.pmpetclinic.services.map;
 /* created by PM
   at 12.11.2020 */
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import pm.spring.pmpetclinic.model.Speciality;
 import pm.spring.pmpetclinic.services.SpecialitiesService;
@@ -9,6 +10,7 @@ import pm.spring.pmpetclinic.services.SpecialitiesService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialitiesServiceMap extends AbstractMapService<Speciality, Long> implements SpecialitiesService {
     @Override
     public Set<Speciality> findAll() {

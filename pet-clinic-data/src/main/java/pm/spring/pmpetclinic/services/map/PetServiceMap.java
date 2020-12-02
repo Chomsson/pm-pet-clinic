@@ -2,6 +2,7 @@ package pm.spring.pmpetclinic.services.map;
 /* created by PM
   at 20.10.2020 */
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import pm.spring.pmpetclinic.model.Pet;
 import pm.spring.pmpetclinic.services.CrudService;
@@ -10,6 +11,7 @@ import pm.spring.pmpetclinic.services.PetService;
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
