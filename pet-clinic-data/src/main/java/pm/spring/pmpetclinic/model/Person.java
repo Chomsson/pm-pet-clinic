@@ -2,9 +2,14 @@ package pm.spring.pmpetclinic.model;
 /* created by PM
   at 26.09.2020 */
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
+@Getter
+@Setter
 @MappedSuperclass
 public class Person extends BaseEntity{
 
@@ -14,19 +19,4 @@ public class Person extends BaseEntity{
     @Column(name = "last_name")
     private String lastName;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }
